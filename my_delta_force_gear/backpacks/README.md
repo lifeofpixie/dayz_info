@@ -1,62 +1,182 @@
 # Backpacks
 
-This folder contains all DayZ backpack JSON data for [My Delta Force Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3427626164).  
-Each JSON file represents a single backpack, manually converted from mod CPP files.
+This folder contains all DayZ backpack JSON data for  
+[My Delta Force Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3427626164)
 
-## Schema Version
+Each JSON file represents a single backpack, manually converted from the mod’s CPP configuration files.
 
-All JSON files include a `_schema` field to indicate the structure version:
+This repository does NOT contain the mod itself.  
+It only provides structured, publicly derived information in JSON format.
 
-- **`_schema: "v1"`** – current version
-- Future updates may use `"v2"`, `"v3"`, etc.
+---
 
-Bots and scripts should use `_schema` to handle different formats safely.
+## Schema Versions
+
+All backpack JSON files include a `_schema` field that defines the structure and supported features.
+
+Bots, scripts, and tools MUST check `_schema` before processing data.
+
+### Schema Overview
+
+| Schema | Description |
+|------|------------|
+| v1 | Standard backpacks |
+| v2 | Backpacks with armor values |
+| v3 | Backpacks with attachment damage transfer |
+
+### Schema Details
+
+### v1 – Standard Backpack
+Base schema used for normal backpacks.
+
+Includes:
+- Inventory size
+- Attachments
+- Environmental values
+- Repair data
+
+Does NOT include:
+- Armor values
+- Attachment damage transfer
+
+---
+
+### v2 – Armored Backpack
+Extends v1 by adding armor data extracted from GlobalArmor in CPP.
+
+Adds:
+- armor field
+
+Used for:
+- Bulletproof shields
+- Armored backpacks
+
+---
+
+### v3 – Attachment Damage Transfer
+Extends v1 (and may also include v2 features).
+
+Adds:
+- transferToAttachmentsCoef
+
+Used when:
+- Damage taken by the backpack is partially transferred to attached items
+
+---
 
 ## JSON Fields
 
-| Field           | Description |
+### Core Fields (All Schemas)
+
+| Field | Description |
+|-----|------------|
+| `_schema` | Schema version (`v1`, `v2`, `v3`) |
+| `name` | Array: `[spawnName, displayName]` |
+| `description` | Item description |
+| `rarity` | Item rarity (`-1` = not set by mod) |
+| `class` | Loot tier (`-1` = not set by mod, 1–5 = Tier 1–5) |
+| `weight` | Weight in grams |
+| `itemSize` | Inventory size (example: "3x3") |
+| `img` | `N/A` if not set, otherwise relative path |
+| `hitpoints` | Item durability |
+| `slots.Total` | Total cargo slots |
+| `slots.H` | Horizontal grid size |
+| `slots.V` | Vertical grid size |
+| `attachments` | Supported attachments and their slot counts |
+| `repairs` | Repair items and effectiveness percentage |
+| `player_hooks` | Player attachment slots (e.g. `Back`, `Armband`) |
+
+---
+
+## Environmental Properties
+
+| Field | Description |
+|------|------------|
+| `absorbency` | Water absorption percentage |
+| `varWetMax` | Maximum wetness level |
+| `heatIsolation` | Heat insulation capability |
+
+All values use a 0 – 1 range.
+
+If a value is not defined by the mod, it may be set to `null`.
+
+---
+
+## Armor Data (v2 only)
+
+```json
+"armor": {
+    "Projectile": { "Health": 0.2, "Blood": 0, "Shock": 0.2 },
+    "Melee": { "Health": 0.2, "Blood": 0, "Shock": 0.2 },
+    "Infected": { "Health": 0.2, "Blood": 0, "Shock": 0.2 },
+    "FragGrenade": { "Health": 0.2, "Blood": 0, "Shock": 0.2 }
+}
+```
+
+Each damage class defines reduction values for:
+- Health
+- Blood
+- Shock
+
+Lower values indicate stronger protection.
+
+---
+
+## Attachment Damage Transfer (v3 only)
+
+| Field | Description |
+|------|------------|
+| `transferToAttachmentsCoef` | Damage coefficient applied to attachments when the backpack takes damage |
+
+Examples:
+- `0.5` → 50% of damage transfers to attachments
+- `null` → not defined or not used
+
+---
+
+## Attachments
+
+The attachments object defines which items can be attached and how many slots are available.
+
+| Attachment Type | Description |
 |-----------------|-------------|
-| `_schema`       | Schema version (v1, v2, v3, etc.) |
-| `Names`         | 1st name: in-game spawn/admin tool name; 2nd name: held/equipped display name |
-| `Desc`          | Item description |
-| `Rarity`        | Item rarity. `-1` = not set by mod. Others can set values for server setups (e.g., Common, Epic, Legendary, custom tables) |
-| `Class`         | Loot tier. `-1` = not set by mod. Others can set: 1 = Tier 1 loot, …, 5 = Tier 5 loot |
-| `Weight`        | Weight in grams |
-| `Img`           | `N/A` if not set. If a path is provided, it’s relative to this JSON file |
-| `Slots.Total`   | Total inventory slots |
-| `Slots.H`       | Horizontal slots |
-| `Slots.V`       | Vertical slots |
-| `Attachments`   | What attachments it can take (see subcategory below). If empty, none are allowed |
-| `Repairs`       | Items that can repair it and the effectiveness percentage |
-| `Player Hooks`  | Which player slots it can attach to (e.g., back, armband) |
+| Rifle | Rifle attachment slots |
+| Pouches | Pouch slots |
+| Glowstick | Glowstick slots |
+| Strap | Strap slots |
+| Canteen | Canteen slots |
+| Rope | Rope slots |
+| Hatchet | Hatchet slots |
+| Sleeping Bag | Sleeping bag slots |
+| Gloves | Glove attachment slots |
+| Baseball Bat | Baseball bat attachment slots |
 
-## Attachments Subcategory
+Example:
+```json
+"Rifle": 2
+```
 
-The `Attachments` field supports the following types:
+Means the backpack supports two rifle attachments.
 
-| Attachment Type | Notes |
-|-----------------|------|
-| Rifle           | Number of rifle slots |
-| Pouches         | Number of pouch slots |
-| Glowstick       | Number of glowstick slots |
-| Strap           | Number of strap slots |
-| Canteen         | Number of canteen slots |
-| Rope            | Number of rope slots |
-| Hatchet         | Number of hatchet slots |
-| Sleeping Bag    | Number of sleeping bag slots |
-| Gloves          | Number of glove attachments |
-| Baseball Bat    | Number of baseball bat attachments |
-
-> Example: `"Rifle": 2` means the backpack can hold **2 rifles**.
+---
 
 ## Usage
 
-- Bots and automation tools can read JSON files directly
-- Players and developers can reference item stats
-- Ensure `_schema` matches your parser logic
+- Intended primarily for bots and automation tools
+- Can be used by players and developers as a reference
+- Always validate `_schema` before parsing
+
+---
+
+## Thanks
+
+Special thanks to [MY] (https://discord.com/users/1279413978132647989) for taking the time to answer questions and provide clarification via Discord on how certain systems and values work within the mod.
+
+---
 
 ## Notes
 
-- Files are named descriptively for easy automation
-- Minor errors may exist due to manual conversion
-- Data is sourced from publicly available mod CPP files
+- File names use CamelCase with underscores
+- Minor inaccuracies may exist due to manual CPP conversion
+- All data is sourced from publicly available mod files
+- This repository does not claim ownership of the mod
