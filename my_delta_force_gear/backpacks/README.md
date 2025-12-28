@@ -170,7 +170,7 @@ Means the backpack supports two rifle attachments.
 
 ## Thanks
 
-Special thanks to [MY] (https://discord.com/users/1279413978132647989) for taking the time to answer questions and provide clarification via Discord on how certain systems and values work within the mod.
+Special thanks to [MY](https://discord.com/users/1279413978132647989) for taking the time to answer questions and provide clarification via Discord on how certain systems and values work within the mod.
 
 ---
 
