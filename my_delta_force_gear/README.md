@@ -1,6 +1,6 @@
 # My Delta Force Gear
 
-This folder contains JSON reference data for the **My Delta Force Gear** mod for DayZ.  
+This folder contains JSON reference data for the **[My Delta Force Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3427626164)** mod for DayZ.  
 All JSON files are manually converted from publicly available **mod CPP files**.
 
 > **Disclaimer:** I do not own or distribute the My Delta Force Gear mod.  
