@@ -1,0 +1,32 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Terry",
+        "Terry's Backpack"
+    ],
+    "description" : "Backpack developed for the Delta Force operator Terry. Offers reasonable storage capacity and durability, as well as dedicated slots for 2 rifles and a sledgehammer.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 15000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.3,
+    "heatIsolation": 1.0,
+    "itemSize" : "5x5",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 100,
+        "H": 10,
+        "V": 10
+    },
+    "attachments": {
+        "Rifle" : 2,
+        "SledgeHammer" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

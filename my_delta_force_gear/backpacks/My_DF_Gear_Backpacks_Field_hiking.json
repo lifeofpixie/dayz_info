@@ -1,0 +1,31 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Field_hiking",
+        "Field Hiking Backpack"
+    ],
+    "description" : "A comfortable backpack designed for long-term deployments within difficult terrain. Its well-designed carrying system enables excellent weight distribution, enhancing its capacity.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 8000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.5,
+    "heatIsolation": 0.8,
+    "itemSize" : "4x4",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 64,
+        "H": 8,
+        "V": 8
+    },
+    "sttachments": {
+        "Rifle" : 2
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

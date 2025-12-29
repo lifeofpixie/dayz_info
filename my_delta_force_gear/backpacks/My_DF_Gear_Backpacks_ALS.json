@@ -1,0 +1,34 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_ALS",
+        "ALS Carrying System"
+    ],
+    "description" : "A modern modular carrying system designed for high-capacity load bearing. Suitable for long-term combat deployments and intensive tasks.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 10000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.4,
+    "heatIsolation": 0.9,
+    "itemSize" : "5x4",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 81,
+        "H": 9,
+        "V": 9
+    },
+    "sttachments": {
+        "Rifle" : 2,
+        "Pouches" : 1,
+        "Glowstick" : 1,
+        "Strap" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

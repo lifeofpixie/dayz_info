@@ -1,0 +1,31 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Camping",
+        "Camping Backpack"
+    ],
+    "description" : "A backpack designed for long-term stationary deployment. Its capacity to store tents and camping equipment make it suitable for sustained survival missions.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 4000,
+    "absorbency": 0.7,
+    "varWetMax" : 0.2,
+    "heatIsolation": 0.6,
+    "itemSize" : "3x3",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 36,
+        "H": 6,
+        "V": 6
+    },
+    "sttachments": {
+        "Canteen" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

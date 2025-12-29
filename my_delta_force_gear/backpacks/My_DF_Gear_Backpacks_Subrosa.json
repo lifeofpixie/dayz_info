@@ -1,0 +1,31 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Subrosa",
+        "Subrosa's Backpack"
+    ],
+    "description" : "Backpack developed for the Delta Force operator Subrosa. Offers minimal storage capacity and high mobility.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 2000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.8,
+    "heatIsolation": 0.5,
+    "itemSize" : "3x2",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 25,
+        "H": 5,
+        "V": 5
+    },
+    "attachments": {
+        "Strap" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

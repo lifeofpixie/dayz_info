@@ -1,0 +1,35 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_D3",
+        "D3 Tactical Mountaineering Bag"
+    ],
+    "description" : "Heavy-duty tactical mountaineering backpack designed for long-distance missions in difficult terrain. Its modular design makes it suitable for rapid deployment and complex equipment management.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 8000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.5,
+    "heatIsolation": 0.8,
+    "itemSize" : "4x4",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 64,
+        "H": 8,
+        "V": 8
+    },
+    "sttachments": {
+        "Rifle" : 1,
+		"Glowstick" : 1,
+		"Strap" : 1,
+		"Rope" : 1,
+		"Sleeping Bag" : -1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

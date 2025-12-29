@@ -1,0 +1,32 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Travel",
+        "Travel Backpack"
+    ],
+    "description" : "A durable and moderate-capacity backpack suitable for traversal and long-distance coverage. Provides moderate waterproofing to contained items.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 2000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.8,
+    "heatIsolation": 0.5,
+    "itemSize" : "3x2",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 25,
+        "H": 5,
+        "V": 5
+    },
+    "attachments": {
+        "Kife Holster" : 1,
+        "Strap" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

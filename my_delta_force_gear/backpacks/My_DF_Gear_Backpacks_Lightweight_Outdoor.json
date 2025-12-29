@@ -1,0 +1,32 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Lightweight_Outdoor",
+        "Light Outdoor Backpack"
+    ],
+    "description" : "Lightweight Backpack designed for rapid attack and reconnaissance missions. Provides limited capacity, but it very comfortable and comparatively light.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 4000,
+    "absorbency": 0.7,
+    "varWetMax" : 0.2,
+    "heatIsolation": 0.6,
+    "itemSize" : "3x3",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 36,
+        "H": 6,
+        "V": 6
+    },
+    "attachments": {
+        "Pouches" : 1,
+        "Canteen" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

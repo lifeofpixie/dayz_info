@@ -1,0 +1,54 @@
+{
+    "_schema": "v2", 
+    "name": [
+        "My_DF_Gear_Backpacks_Engineering_Shield_LV2",
+        "Bulletproof Shield II"
+    ],
+    "description" : "A bulletproof shield that can be carried on the back to provide protection from unseen attackers. Provides ballistic protection that meets the level III bulletproof standard. Can be upgraded using Armor Plates.",
+    "rarity": -1,
+    "class" : 3,
+    "weight": 6000,
+    "absorbency": null,
+    "varWetMax" : 0.6,
+    "heatIsolation": 0.7,
+    "itemSize" : "4x3",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 49,
+        "H": 7,
+        "V": 7
+    },
+    "attachments": {
+        
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ],
+    "transferToAttachmentsCoef": null,
+    "armor": {
+        "Projectile": {
+            "Health": 0.3,
+            "Blood": 0,
+            "Shock": 0.3
+        },
+        "Melee": {
+            "Health": 0.3,
+            "Blood": 0,
+            "Shock": 0.3
+        },
+        "Infected": {
+            "Health": 0.3,
+            "Blood": 0,
+            "Shock": 0.3
+        },
+        "FragGrenade": {
+            "Health": 0.3,
+            "Blood": 0,
+            "Shock": 0.3
+        }
+    }
+}

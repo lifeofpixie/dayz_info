@@ -1,0 +1,31 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_Cross",
+        "Messenger Bag"
+    ],
+    "description" : "A lightweight, moderate-capacity backpack suited to short-distance missions. Has dedicated storage for medical supplies and ammunition.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 200,
+    "absorbency": 0.2,
+    "varWetMax" : 0.7,
+    "heatIsolation": 0.5,
+    "itemSize" : "3x2",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 25,
+        "H": 5,
+        "V": 5
+    },
+    "sttachments": {
+        
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

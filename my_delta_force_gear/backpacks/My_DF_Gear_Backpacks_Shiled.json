@@ -1,0 +1,55 @@
+{
+    "_schema": "v2", 
+    "name": [
+        "My_DF_Gear_Backpacks_Shiled",
+        "Shield"
+    ],
+    "description" : "A shield that can be carried on the back to provide protection from unseen attackers. Provides ballistic protection that meets the level IV bulletproof standard.",
+    "rarity": -1,
+    "class" : 4,
+    "weight": 8000,
+    "absorbency": null,
+    "varWetMax" : 0.5,
+    "heatIsolation": 0.8,
+    "itemSize" : "4x4",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 64,
+        "H": 8,
+        "V": 8
+    },
+    "attachments": {
+        "Rifle" : 2
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ],
+    "transferToAttachmentsCoef" : 0.5,
+    "armor": {
+        "Projectile": {
+            "Health": 0.25,
+            "Blood": 0,
+            "Shock": 0.25
+        },
+        "Melee": {
+            "Health": 0.25,
+            "Blood": 0,
+            "Shock": 0.25
+        },
+        "Infected": {
+            "Health": 0.25,
+            "Blood": 0,
+            "Shock": 0.25
+        },
+        "FragGrenade": {
+            "Health": 0.25,
+            "Blood": 0,
+            "Shock": 0.25
+        }
+    }
+    
+}

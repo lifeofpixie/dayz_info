@@ -1,0 +1,32 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_HLS2",
+        "HLS-2 Heavy Backpack"
+    ],
+    "description" : "Heavy-duty combat backpack. Its large storage capacity and excellent load-bearing design make it suitable for multi-day deployments.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 8000,
+    "absorbency": 0.5,
+    "varWetMax" : 0.8,
+    "heatIsolation": 0.8,
+    "itemSize" : "4x4",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 64,
+        "H": 8,
+        "V": 8
+    },
+    "attachments": {
+        "Rifle" : 2,
+        "Pouches" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

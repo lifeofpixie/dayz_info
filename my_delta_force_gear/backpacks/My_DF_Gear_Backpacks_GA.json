@@ -1,0 +1,31 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_GA",
+        "GA Field Backpack"
+    ],
+    "description" : "A field backpack with a highly modular design. Its flexible storage options make it suitable for a wide range of complex tasks.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 6000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.6,
+    "heatIsolation": 0.7,
+    "itemSize" : "4x3",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 49,
+        "H": 7,
+        "V": 7
+    },
+    "attachments": {
+        "Strap" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "_schema": "v1", 
+    "name": [
+        "My_DF_Gear_Backpacks_GT5",
+        "GT5 Field Backpack"
+    ],
+    "description" : "Medium-sized field backpack with good protection and storage capacity. Suitable for long-deployment battlefield missions.",
+    "rarity": -1,
+    "class" : -1,
+    "weight": 8000,
+    "absorbency": 0.2,
+    "varWetMax" : 0.5,
+    "heatIsolation": 0.8,
+    "itemSize" : "4x4",
+    "img": "N/A",
+    "hitpoints" : 500,
+    "slots": {
+        "Total": 64,
+        "H": 8,
+        "V": 8
+    },
+    "attachments": {
+        "Pistol Holder" : 1,
+        "Strap" : 1,
+        "Knife" : 1
+    },
+    "repairs": {
+        "Sewing Kit" : 100
+    },
+    "player_hooks": [
+        "Back"
+    ]
+}
